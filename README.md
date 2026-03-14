@@ -78,7 +78,6 @@ This command will:
 - Check version consistency
 - Verify manifest correctness
 - Ensure no conflicts with existing packages
-- Compute and validate checksums
 - Perform consistency checks before publication
 
 If any issue is detected, the command will stop and report the error.
