@@ -1,0 +1,12 @@
+[package]
+name = "test_module"
+version = "0.1.0"
+description = "An empty test module"
+repository = ""
+authors = ["tizio", "caio"]
+license = ""
+include = ["src"]
+
+[main]
+src = "src"
+udo = "src/test.udo"
