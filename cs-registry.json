@@ -2,6 +2,6 @@
     "test_module": {
         "versions": ["0.1.0"],
         "authors": ["tizio", "caio"],
-        "descriprion": "An empty test module"
+        "description": "An empty test module"
     }
 }
