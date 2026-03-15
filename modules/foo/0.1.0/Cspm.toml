@@ -9,7 +9,7 @@ include = ["src"]
 
 [main]
 src = "src"
-udo = "src/test.udo"
+udo = "src/foo.udo"
 
 [dependencies]
 bar = "0.1.0"
