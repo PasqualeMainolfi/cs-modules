@@ -1,7 +1,17 @@
 {
-    "test_module": {
+    "foo": {
         "versions": ["0.1.0"],
         "authors": ["tizio", "caio"],
         "description": "An empty test module"
+    },
+    "bar": {
+        "versions": ["0.1.0"],
+        "authors": ["tiziob"],
+        "description": "Another empty test module"
+    },
+    "baz": {
+        "versions": ["0.1.0"],
+        "authors": ["tizioc"],
+        "description": "Another empty test module"
     }
 }
