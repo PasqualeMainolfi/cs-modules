@@ -61,6 +61,14 @@ modules/
       <Cspm.lock> (optional)
 ```
 
+### Versioning
+
+Module versions follow the `major.minor.patch` format (e.g. `1.2.0`).  
+Each component must be numeric. Versions are compared numerically and do not follow semantic versioning rules.  
+If a version is specified during installation, that exact version will be installed.  
+If no version is specified, Cspm installs the **latest available version**. The same rule applies when updating modules.
+
+
 ## Publishing a module
 
 To publish a new module to the community repository, follow these steps:
