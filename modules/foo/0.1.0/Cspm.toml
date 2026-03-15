@@ -1,5 +1,5 @@
 [package]
-name = "test_module"
+name = "foo"
 version = "0.1.0"
 description = "An empty test module"
 repository = ""
@@ -10,3 +10,6 @@ include = ["src"]
 [main]
 src = "src"
 udo = "src/test.udo"
+
+[dependencies]
+bar = "0.1.0"

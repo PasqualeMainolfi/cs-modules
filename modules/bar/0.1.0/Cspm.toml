@@ -1,0 +1,12 @@
+[package]
+name = "bar"
+version = "0.1.0"
+description = "Another empty test module"
+repository = ""
+authors = ["tiziob"]
+license = ""
+include = ["src"]
+
+[main]
+src = "src"
+udo = "src/bar.udo"
