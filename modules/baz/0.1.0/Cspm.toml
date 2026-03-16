@@ -5,6 +5,7 @@ description = "Another empty test module"
 repository = ""
 authors = ["tizioc"]
 license = ""
+cs_version = "7.0"
 include = ["src"]
 
 [main]
