@@ -8,10 +8,10 @@ The repository is designed to be easy to maintain and easy to consume by tools s
 
 ## Repo structure
 
-The repository is organized into two main parts:
+The repository is organized into two main parts (modules and projects):
 
 ```
-├── cs-registry.json
+├── csm-registry.json
 └── modules
     ├── <module-name>
     │   ├── <version>
@@ -19,11 +19,17 @@ The repository is organized into two main parts:
     │   └── <version>
     │       └── <module files>
     └── ...
+    
+├── csp-registry.json
+└── projects
+    ├── <project-name>
+    │   ├── <project files>
+    └── ...
 ```
 
-### cs-registgry.json
+### registry files
 
-The `registry.json` file contains the list of available modules and their published versions.
+The `csm-registry.json` and `csp-registry.json` file contains the list of available modules and their published versions and projects.
 
 ```json
 {
@@ -40,7 +46,7 @@ The `registry.json` file contains the list of available modules and their publis
 }
 ```
 
-Each entry maps a module name to the list of available versions.
+Each entry maps a module or project name to the list of available versions, authors and description.
 
 ### modules/
 
@@ -61,6 +67,24 @@ modules/
       <Cspm.lock> (optional)
 ```
 
+### projects/
+
+The projects directory contains the actual project packages.
+
+```
+projects/
+  project1/
+    src/
+        main.csd or (main.orc/main.sco)
+    Cspm.toml
+    <Cspm.lock> (optional)
+  project2/
+    src/
+        main.csd or (main.orc/main.sco)
+    Cspm.toml
+    <Cspm.lock> (optional)
+```
+
 ### Versioning
 
 Module versions follow the `major.minor.patch` format (e.g. `1.2.0`).  
@@ -68,13 +92,14 @@ Each component must be numeric. Versions are compared numerically and do not fol
 If a version is specified during installation, that exact version will be installed.  
 If no version is specified, Cspm installs the **latest available version**. The same rule applies when updating modules.
 
-
 ## Publishing a module
 
-To publish a new module to the community repository, follow these steps:
+To publish a new module or share a project to the community repository, follow these steps:
 
 1. **Fork the Repository**: start by forking the official modules repository to your GitHub account
-2. **Add Your Mudule**: Add your package following the required repository structure. Each version must be placed inside its own folder (`modules 🡢 <module_name> 🡢 <version> 🡢 <module files>`)
+2. **Add Your Module/Project**: Add your package following the required repository structure.
+    - **Modules**: Each version must reside in its own directory: `modules → <module-name> → <version> → <module files>`
+    - **Projects**: Each project must reside in its own directory: `projects → <project-name> → <project files>`
 3. **Validate with cspm**: run from shell 
 
 ```shell
@@ -90,4 +115,4 @@ This command will:
 
 If any issue is detected, the command will stop and report the error.
 
-4. **Open a Pull Request**: If all checks pass, create a Pull Request from your fork to the official repository. After review and approval, the module will be merged and made available to the community
+4. **Open a Pull Request**: If all checks pass, create a Pull Request from your fork to the official repository. After review and approval, the module/project will be merged and made available to the community
